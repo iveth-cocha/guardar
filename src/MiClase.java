@@ -6,13 +6,14 @@ public class MiClase implements Serializable { //imple.. seri.... pasa de bites 
     //dato que guarda el objeto y permite guardar en disco
     //long serialVersionUID=1L >> long =tipo dato,>>serial....=nombre de variacle
     private static final long serialVersionUID=1L;
-
+    private String nombre;
      private int edad;
-     private String nombre;
 
-    public MiClase(int edad, String nombre) {
-        this.edad = edad;
+
+    public MiClase( String nombre, int edad) {
         this.nombre = nombre;
+        this.edad = edad;
+
     }
 
     public int getEdad() {
