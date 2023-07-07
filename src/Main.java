@@ -7,14 +7,14 @@ public class Main {
 
     public static void main(String[] args) {
        //              =direccion de la ruta o donde se guarda
-        String filePath= "datos.dat"; //.dat es como extencion de .txt
+        String filePath = "datos.dat"; //.dat es como extencion de .txt
 
         MiClase miObjeto= new MiClase("Iveth",21);
 
         //defino la ruta
         try(
                 FileOutputStream fileOut=new FileOutputStream(filePath);
-                ObjectOutputStream obOut=new ObjectOutputStream(fileOut);
+                ObjectOutputStream obOut=new ObjectOutputStream(fileOut)
                 ){
 
             obOut.writeObject(miObjeto);
@@ -25,10 +25,10 @@ public class Main {
         }
 
 
-        /////////
+        /*-----------------------------------------------*/
         try(
                 FileInputStream fileIn=new FileInputStream(filePath);
-                ObjectInputStream obIn= new ObjectInputStream(fileIn);
+                ObjectInputStream obIn= new ObjectInputStream(fileIn)
         ){
             MiClase readObject=(MiClase)obIn.readObject();
             System.out.println("El objeto en disco es: "+readObject);
